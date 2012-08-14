@@ -1,0 +1,22 @@
+[user]
+	name = cxsun
+	email = chengxiongsun@gmail.com
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	dc = dcommit
+	rb = rebase
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
+[branch "master"]
+    mergeoptions = --no-commit --no-ff
+[github]
+	user = cxsun
+	email = chengxiongsun@gmail.com
