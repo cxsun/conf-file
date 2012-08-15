@@ -36,3 +36,44 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:~/bin/
 hash -d 374="/work/code/FVA374"
+
+export GREP_OPTIONS='--color=auto --exclude-dir=\.svn --exclude-dir=\.git --exclude-dir=CVS --exclude-dir=build.tmp'
+alias cp='nocorrect cp'
+
+alias gosvn='cd /work/code/SVN_TRUNK'
+alias gom4='cd /work/code/UTM_M4'
+alias gom3='cd /work/code/UTM_M3'
+alias goxml='cd /work/code/json_xml/'
+alias go35='cd /work/code/UTM_M3.5_INTEGRATION_READYNAS'
+alias go3g='cd /work/code/UTM_M3.5_3G'
+alias goapp='cd /work/code/UTM_M3.5_AppFW'
+alias gogit='cd /work/code/GIT_DB'
+alias go374='cd /work/code/FVA374'
+alias chdev='SHELL=/bin/bash chroot /work/DEV/UTM_DEV/'
+
+alias svnst="svn st | awk '/^[^?]/'"
+alias ggr='git log --pretty=format:"[%an %h]: %s" --topo-order --graph'
+# cpwall337
+alias tost3='ssh apps@st3.cpsecure.com'
+#alias getpw2='sh /home/cxsun/GIT_DB/tool/getPasswd.sh'
+alias getpw='sh /work/code/GIT_DB/tool/descrypt_passwd/getPasswd.sh'
+alias ec='emacsclient -t -a ""'
+# tmux
+alias tn='tmux new -ds '
+alias ta='tmux attach -t '
+alias tls='tmux ls'
+
+alias nobomb="awk '{if(NR==1)sub(/^\xef\xbb\xbf/,\"\");print}' "
+alias vimdiff="vimdiff --noplugin"
+alias netrefresh='killall dhclient; sleep 1; dhclient eth0'
+alias ssh='SHELL=/bin/sh TERM=xterm ssh'
+
+function portal_login()
+{
+    local host=192.168.1.1
+    local action=portal_login
+    local user=cxsun
+    local pass=123456
+    /bin/sh /work/code/GIT_DB/tool/simulate_ui_action.sh $host $action $user $pass
+}
+
