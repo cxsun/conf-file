@@ -77,3 +77,14 @@ function portal_login()
     /bin/sh /work/code/GIT_DB/tool/simulate_ui_action.sh $host $action $user $pass
 }
 
+#convert epoch seconds to Date
+sec2date(){
+    sec="$1"
+    if [ $# -gt 0 ]; then
+        date=`date -d "@$sec" +"%Y-%m-%d %H:%M:%S %z"`
+        echo $date
+    else
+        echo "Usage: $FUNCNAME <SECONDS>"
+    fi
+}
+

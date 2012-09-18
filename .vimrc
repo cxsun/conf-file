@@ -55,7 +55,8 @@ Bundle 'taglist.vim'
 Bundle 'templates.vim'
 "Bundle 'vimim.vim'
 Bundle 'ZenCoding.vim'
-Bundle 'css_color.vim'
+"Bundle 'css_color.vim'
+Bundle 'ap/vim-css-color'
 "requires ruby
 "Bundle 'hallettj/jslint.vim'
 Bundle 'Lokaltog/vim-powerline'
@@ -77,6 +78,10 @@ Bundle 'majutsushi/tagbar'
 
 " set leader
 "let mapleader = ","
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle "vim-scripts/genutils"
+Bundle "vim-scripts/lookupfile"
+Bundle "jboyens/vim-protobuf"
 
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -164,6 +169,7 @@ set foldlevel=100
 " set nocompatible
 set laststatus=2
 set encoding=utf-8
+set termencoding=utf-8
 "let g:tagbar_iconchars = ['▷', '◢']
 let g:tagbar_iconchars = ['+', '-']
 let g:Powerline_symbols_override = {
@@ -173,3 +179,22 @@ let g:Powerline_symbols_override = {
 
 "let g:Powerline_symbols = 'fancy'
 "let g:Powerline_cache_enabled = 0
+
+""""""""""""""""""""""""""""""
+" lookupfile setting
+""""""""""""""""""""""""""""""
+let g:LookupFile_MinPatLength = 2               "最少输入2个字符才开始查找
+let g:LookupFile_PreserveLastPattern = 0        "不保存上次查找的字符串
+let g:LookupFile_PreservePatternHistory = 1     "保存查找历史
+let g:LookupFile_AlwaysAcceptFirst = 1          "回车打开第一个匹配项目
+let g:LookupFile_AllowNewFiles = 0              "不允许创建不存在的文件
+if filereadable("./filenametags")                "设置tag文件的名字
+let g:LookupFile_TagExpr = '"./filenametags"'
+endif
+"映射LookupFile为,lk
+nmap <silent> <leader>lk :LUTags<cr>
+"映射LUBufs为,ll
+nmap <silent> <leader>ll :LUBufs<cr>
+"映射LUWalk为,lw
+nmap <silent> <leader>lw :LUWalk<cr>
+
