@@ -82,6 +82,7 @@ Bundle 'majutsushi/tagbar'
 Bundle "vim-scripts/genutils"
 Bundle "vim-scripts/lookupfile"
 Bundle "jboyens/vim-protobuf"
+Bundle "vim-scripts/Indent-Guides"
 
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -170,16 +171,26 @@ set foldlevel=100
 set laststatus=2
 set encoding=utf-8
 set termencoding=utf-8
-"let g:tagbar_iconchars = ['▷', '◢']
-let g:tagbar_iconchars = ['+', '-']
+let g:tagbar_iconchars = ['▷', '◢']
+"let g:tagbar_iconchars = ['+', '-']
 let g:Powerline_symbols_override = {
         \ 'BRANCH': [0x2213],
         \ 'LINE': 'L',
         \ }
 
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 "let g:Powerline_cache_enabled = 0
+"let g:Powerline_theme = 'skwp'
+set guifont=Monaco\ for\ Powerline:h12
 
+"""""""""""""""""""""""""""""
+" enable 256 colors
+" FROM: http://vim.wikia.com/wiki/256_colors_in_vim
+"""""""""""""""""""""""""""""
+set t_Co=256
+"set t_AB=^[[48;5;%dm
+"set t_AF=^[[38;5;%dm
+"
 """"""""""""""""""""""""""""""
 " lookupfile setting
 """"""""""""""""""""""""""""""
@@ -198,3 +209,14 @@ nmap <silent> <leader>ll :LUBufs<cr>
 "映射LUWalk为,lw
 nmap <silent> <leader>lw :LUWalk<cr>
 
+
+""""""""""""""""""""""""""""""""""""
+" IndentGuilde
+" :set cuc " hight light current column
+""""""""""""""""""""""""""""""""""""
+let g:indent_guides_guide_size=1
+
+""""""""""""""""""""""""""""""""""""
+" VIM7.3+ support this feature
+""""""""""""""""""""""""""""""""""""
+"set cc=80
