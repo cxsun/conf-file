@@ -18,5 +18,9 @@
 [branch "master"]
     mergeoptions = --no-commit --no-ff
 [github]
-	user = cxsun
+	user = git
 	email = chengxiongsun@gmail.com
+[http]
+    # disable the SSL CERT verfiy:
+    # export GIT_SSL_NO_VERIFY=truE
+	sslVerify = false

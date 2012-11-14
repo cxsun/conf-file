@@ -65,7 +65,7 @@ Bundle 'hallison/vim-markdown'
 Bundle 'majutsushi/tagbar'
 " original repos on github
 "Bundle 'tpope/vim-fugitive'
-"Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'tpope/vim-rails.git'
 
@@ -83,6 +83,8 @@ Bundle "vim-scripts/genutils"
 Bundle "vim-scripts/lookupfile"
 Bundle "jboyens/vim-protobuf"
 Bundle "vim-scripts/Indent-Guides"
+"Bundle 'Highlight-UnMatched-Brackets'
+Bundle "altercation/vim-colors-solarized"
 
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -220,3 +222,11 @@ let g:indent_guides_guide_size=1
 " VIM7.3+ support this feature
 """"""""""""""""""""""""""""""""""""
 "set cc=80
+"
+
+""""""""""""""""""""""""""""""""""""
+" cololrscheme
+""""""""""""""""""""""""""""""""""""
+"syntax enable
+"set background=dark
+"colorscheme solarized

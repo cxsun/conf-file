@@ -1,4 +1,16 @@
 #!/usr/bin/env perl
+use strict;
+use autodie;
+use feature qw(say);
+
+my $time = time();
+my ($sec , $min , $hour, $mday , $mon , $year) = (localtime($time))[0...5];
+$mon ++ ;
+$year += 1900 ;
+my $time_str = sprintf("%4d-%2d-%2d %02d:%02d:%02d" , $year, $mon, $mday, $hour, $min , $sec);
+say $time_str;
+
+__END__
 #
 # name     : uptime, uptime for tmux
 # author   : Xu Xiaodong <xxdlhy@gmail.com>
